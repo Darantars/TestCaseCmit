@@ -1,0 +1,11 @@
+.numButtonWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 480px;
+}
+
+.numButtonWrapper button {
+  flex: 1 1 calc(33.333% - 10px); /* 33.333% для 3 кнопок в строке, минус отступы */
+  margin: 5px; /* Отступы между кнопками */
+  box-sizing: border-box; /* Учитывает padding и border в ширине и высоте */
+}
