@@ -9,11 +9,11 @@
 <body>
     <div class="calcuPluginDisplay">
         <div class="resaltStroke">
-            <input type="text" id="display" placeholder="0" readonly>
+            <input class="calcDisplay" type="text" id="display" placeholder="0" readonly>
             <button class="mainActionButton" onclick="clearDisplay()">C</button>
             <button class="mainActionButton" onclick="calculateResult()">=</button>
         <div/>
-        <div>
+        <div class= actionButtonWrapper>
             <button class="actionButton" onclick="performOperation('*')">*</button>
             <button class="actionButton" onclick="performOperation('-')">-</button>
             <button class="actionButton" onclick="performOperation('/')">/</button>
