@@ -1,4 +1,4 @@
-let displayValue = '';
+let displayValue = '0';
 let firstOperand = null;
 let operator = null;
 let waitingForSecondOperand = false;
@@ -31,6 +31,9 @@ function performOperation(nextOperator) {
 
     waitingForSecondOperand = true;
     operator = nextOperator;
+    if (operator !== '+/-') {
+        displayValue += ` ${operator}`;
+    }
     updateDisplay();
 }
 
@@ -58,6 +61,17 @@ function calculateResult() {
         waitingForSecondOperand = false;
         updateDisplay();
     }
+}
+
+function changeSign() {
+    if (waitingForSecondOperand) {
+        firstOperand = -firstOperand;
+        displayValue = String(firstOperand);
+    } else {
+        const currentValue = parseFloat(displayValue);
+        displayValue = String(-currentValue);
+    }
+    updateDisplay();
 }
 
 function clearDisplay() {
